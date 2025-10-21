@@ -109,39 +109,4 @@ $libro2->printLibro();
 print 'El número de libros que hay es ' . Libro::$numLibros;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ?>
