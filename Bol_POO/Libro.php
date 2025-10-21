@@ -13,10 +13,10 @@ class Libro
     private $refLibro;
     private $prestado;
     private $contieneCD;
-    private static $referencia = 1;
+    private static $referencia=1;
     public static $numLibros = 0;
 
-    const LIBRO = 1;
+
 
     public function __construct($autor, $titulo, $paginas, $refLibro, $prestado)
     {
@@ -76,13 +76,13 @@ class Libro
 
     public function printLibro()
     {
-        echo 'El autor del libro es ', $this->autor, '<br>';
-        echo 'El título del libro ', $this->titulo, '<br>';
-        echo 'El número de páginas es ', $this->paginas, '<br>';
+        echo 'Autor:  ', $this->autor, '<br><br> ';
+        echo ' Titulo: ', $this->titulo, '<br><br> ';
+        echo ' Paginas: ', $this->paginas, '<br><br> ';
         if (strlen($this->refLibro) > 0) {
             echo 'La referencia del libro es ', $this->refLibro, '<br>';
         }
-        echo 'El libro fue prestado ', $this->prestado, ' veces <br>';
+        echo 'El libro fue prestado ', $this->prestado, ' veces <br><br>';
 
         if ($this->contieneCD) {
             echo 'El libro contiene CD';
@@ -92,19 +92,21 @@ class Libro
 
 
 
-$libro1 = new Libro('Mila', 'Vais a suspender', 100, '', 0);
+$libro1 = new Libro('Cervantes ', 'Don quijote de la Mancha', 1512, '', 0);
 
 print $libro1->getAutor();
 print $libro1->getTitulo();
 print $libro1->getPaginas();
+
 echo '<br>';
-//$libro1->setRefLibro(5522);
+$libro1->setRefLibro(56343);
 $libro1->setPrestado();
 $libro1->printLibro();
 
 
-$libro2 = new Libro('Javi', 'Viendo la luz', 150, '', 0);
+$libro2 = new Libro('Antonio Machado', 'Campos de Castilla', 312, '', 33);
 $libro2->printLibro();
+
 
 print 'El número de libros que hay es ' . Libro::$numLibros;
 
