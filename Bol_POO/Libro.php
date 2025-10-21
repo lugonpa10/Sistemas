@@ -145,13 +145,3 @@ print 'El número de libros que hay es ' . Libro::$numLibros;
 
 
 ?>
-=======
-
-function setPrestado($prestado) {}
-
-function getPrestado()
-{
-return $this->prestado;
-}
-}
->>>>>>> aa07f6cbfae58a997d28db669f8a758a66cd86d5
