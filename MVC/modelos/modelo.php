@@ -18,4 +18,15 @@ class Empleado
         $this->db=null;
         return $result;
     }
+
+    public function getEmpleado(){
+
+        $sql = "SELECT * FROM empleados";
+        $result = $this -> db -> query($sql);
+        $this -> empleado = $result ->fetchAll(PDO::FETCH_ASSOC);  //fetchAll accede a todos los campos de la tabla
+        $this -> db=null;
+
+        return $this -> empleado;
+
+    }
 }

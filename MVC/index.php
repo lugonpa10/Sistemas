@@ -8,6 +8,19 @@
     <?php
     if (isset($_POST['nombre']) && ($_POST['nombre'] != '') && isset($_POST['apellidos']) && ($_POST['apellidos'] != '') && isset($_POST['telefono']) && ($_POST['telefono'] != '') && isset($_POST['departamento']) && ($_POST['departamento'] != '')) {
         
+        // llamar al modelo para utilizar sus metodos
+        require_once "modelos/modelo.php";
+
+        $empleado = new Empleado();
+        $result = $empleado -> setEmpleado($_POST['nombre'],$_POST['apellidos'],$_POST['telefono'],$_POST['departamento']);
+
+        if($result){
+            echo "<p style=\"color:green;\">El usuario se ha añadido correctamente</p>";
+        }else{
+            echo "<p style=\"color:red;\">El usuario se ha añadido correctamente</p>";
+
+        }
+
     }
     ?>
 </head>
