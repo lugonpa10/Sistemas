@@ -5,6 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listado de empleados</title>
+    <style>
+        th{
+            width: 150px;
+        }
+
+        td{
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -27,14 +36,14 @@
             <td><?php  echo $result[$i]['apellidos']?></td>
             <td><?php  echo $result[$i]['telefono']?></td>
             <td><?php  echo $result[$i]['departamento']?></td>
-            <td><?php echo "<a href=\"../controladores/controlador_actualizar.php?id={$result[$i]['id']}\">Actualizar</a>"?></td>
+            <td><?php echo "<a href=\"../controladores/controlador_editar.php?id={$result[$i]['id']}\">Actualizar</a>"?></td>
             <td><?php echo "<a href=\"../controladores/controlador_borrar.php?id={$result[$i]['id']}\">Borrar</a>"?></td>
 
 
         </tr>
         <?php } ?>
     </table>
-    <a href="../index.php"></a>
+    <a href="../index.php">Pagina de inicio</a>
 </body>
 
 </html>
