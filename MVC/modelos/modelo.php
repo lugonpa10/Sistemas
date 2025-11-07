@@ -41,4 +41,10 @@ class Empleado
         return $dato;
         
     }
+
+    public function actualizar($id){
+
+        $sql = "UPDATE nombre FROM empleados ";
+    
+    }
 }
