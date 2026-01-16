@@ -19,7 +19,10 @@ class CancionSeeder extends Seeder
             'titulo'=>'Debi tirar mas fotos',
             'album'=>'DTMF',
             'grupo'=>'Bad bunny',
-            'anio'=>'2025'
+            'anio'=>'2025',
+            // 'created_at' =>now(),
+            // 'updated_at' => now()
+
 
         ]
         
