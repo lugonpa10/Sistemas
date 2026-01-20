@@ -20,7 +20,7 @@
 </head>
 <body>
     <a href="{{ route('inicio') }}">Inicio</a>
-    {{-- <a href="{{ route('formAgregar') }}">Agregar</a> --}}
+    <a href="{{ route('formAgregar') }}">Agregar</a>
     @yield('contenido')
     <hr>
     <p>Crud creado con Laravel por Lucas</p>
