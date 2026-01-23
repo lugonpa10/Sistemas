@@ -23,9 +23,8 @@
                 <td>{{ $cancion ->album }}</td>
                 <td>{{ $cancion ->grupo }}</td>
                 <td>{{ $cancion ->anio }}</td>
-                 <td><a href="{{ route('editarCancion',['id'=>$cancion->id]) }}"></a></td> 
-                <td></td>
                 <td><a href="{{ route('eliminarCancion',['id'=>$cancion->id]) }}">Eliminar</a></td>
+                <td><a href="{{ route('editarCancion',['id'=>$cancion->id]) }}">Editar</a></td>
 
             </tr>
         @endforeach
